@@ -12,7 +12,14 @@ for (let i = 0; i < 10000; i++) {
   });
 }
 
-// button.addEventListener("click", () => {
-//   let gridSize = prompt("Enter a number from 1 through 100");
-//   container.style.background = `grid-template: repeat(${gridSize} , 1fr) / repeat(${gridSize}, 1fr)`;
-// });
+
+button.addEventListener("click", () => {
+  let gridSize = parseInt(prompt("Enter a number from 1 through 100"));
+  if (gridSize > 100) {
+    gridSize = 100;
+  }
+  container.setAttribute(
+    "style",
+    `grid-template: repeat(${gridSize} , 1fr) / repeat(${gridSize}, 1fr)`
+  );
+});
