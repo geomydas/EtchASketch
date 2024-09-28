@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.update-size {
+  position: absolute;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.5rem;
+}
+.container {
+  display: grid;
+  grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+  width: clamp(0px, 100%, 25rem);
+  outline: 5px solid black;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.container > *:hover {
+}
